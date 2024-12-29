@@ -1,3 +1,4 @@
+
 /*
  * Copyright 2020 Spotify AB
  *
@@ -42,6 +43,7 @@ async function getSchema(conn: DbConnectionType) {
 
 export async function awaitDbConnection(
   conn: DbConnectionType,
+  // @ts-ignore
   options: Options = { maxRetryTime: 10000 },
 ): Promise<void> {
   logger.debug('awaiting db connection...');
